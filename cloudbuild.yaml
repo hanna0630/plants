@@ -18,4 +18,4 @@ steps:
       -  '--region=us-central1'
       -  '--allow-unauthenticated'
 options:
-      logging: GCS_ONLY
+      logging: NONE
