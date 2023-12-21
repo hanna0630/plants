@@ -3,17 +3,17 @@ steps:
     args: ['run', 'main.go']
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$nandur/nandur', '.']
+    args: ['build', '-t', 'gcr.io/nandur/nandur', '.']
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/$nandur/nandur']
+    args: ['push', 'gcr.io/nandur/nandur']
 
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
       - 'run'
       - 'deploy'
       - 'your-app-name'
-      - '--image=gcr.io/$nandur/nandur'
+      - '--image=gcr.io/nandur/nandur'
       - '--platform=managed'
-      - '--region=your-us-central1'
+      - '--region=us-central1'
       - '--allow-unauthenticated'
