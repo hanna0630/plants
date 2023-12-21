@@ -6,7 +6,7 @@
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://34.128.64.226:5432/nandur-db</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
+      <working-dir>https://github.com/hanna0630/plants.git</working-dir>
     </data-source>
   </component>
 </project>
