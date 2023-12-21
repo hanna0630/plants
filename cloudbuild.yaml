@@ -12,7 +12,7 @@ steps:
     args:
       - 'run'
       - 'deploy'
-      - 'your-app-name'
+      - 'nandur'
       - '--image=gcr.io/nandur/nandur'
       - '--platform=managed'
       - '--region=us-central1'
