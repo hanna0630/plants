@@ -13,9 +13,11 @@ steps:
       - 'run'
       - 'deploy'
       - 'nandur'
-      - '--image=gcr.io/nandur/nandur'
+      - '--image'
       - '--platform=managed'
       - '--region=us-central1'
       - '--allow-unauthenticated'
+  image :
+      - 'gcr.io/nandur/nandur'
   options:
     logging: NONE
