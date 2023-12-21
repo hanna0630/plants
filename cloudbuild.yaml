@@ -1,23 +1,23 @@
 steps:
-  - name: 'gcr.io/cloud-builders/go'
-    args: ['run', 'main.go']
+  -  name: 'gcr.io/cloud-builders/go'
+      args: ['run', 'main.go']
 
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/nandur/nandur', '.']
+  -  name: 'gcr.io/cloud-builders/docker'
+      args: ['build', '-t', 'gcr.io/nandur/nandur', '.']
 
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/nandur/nandur']
+  -  name: 'gcr.io/cloud-builders/docker'
+      args: ['push', 'gcr.io/nandur/nandur']
 
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args:
-      -'run'
-      -'deploy'
-      -'nandur'
-      -'--image'
-      -'--platform=managed'
-      -'--region=us-central1'
-      -'--allow-unauthenticated'
+  -  name: 'gcr.io/cloud-builders/gcloud'
+      args:
+      -  'run'
+      -  'deploy'
+      -  'nandur'
+      -  '--image'
+      -  '--platform=managed'
+      -  '--region=us-central1'
+      -  '--allow-unauthenticated'
   image :
-      -'gcr.io/nandur/nandur'
+      -  'gcr.io/nandur/nandur'
   options:
     logging: NONE
