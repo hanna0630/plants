@@ -1,6 +1,6 @@
 steps:
   -  name:  'gcr.io/cloud-builders/go'
-      args:  ['run', 'main.go']
+      args: ['run', 'main.go']
 
   -  name:  'gcr.io/cloud-builders/docker'
       args:  ['build', '-t', 'gcr.io/nandur/nandur', '.']
